@@ -23,7 +23,6 @@ class productsFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'name' => $this->faker->words($nb = 6, $asText = false),
             'available_qty' => $this->faker->numberBetween(1,10),
             'total_qty' => $this->faker->numberBetween(1,20),
             'sales_qty' => $this->faker->numberBetween(1,5),

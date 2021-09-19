@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+// use App\Http\Controllers\ProductsController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+
+Auth::routes();
+Route::get('/', [ 'as' => '/', 'uses' => 'ProductsController@index']);
+Route::get('cart/{id?}', [ 'as' => 'cart', 'uses' => 'ProductsController@cart']);
+Route::post('checkout', [ 'as' => 'checkout', 'uses' => 'ProductsController@checkout']);
+Route::post('place_order', [ 'as' => 'place_order', 'uses' => 'ProductsController@placeOrder']);
+
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
