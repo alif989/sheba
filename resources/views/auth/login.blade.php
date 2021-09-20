@@ -70,4 +70,7 @@
         </div>
     </div>
 </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.min.js"></script>
+    <script src="asset/reseller/js/custom.js"></script>
 @endsection
